@@ -58,23 +58,25 @@
       </div>
       <div>
         <button
-          class="border rounded-xl border-[#00bdfe] bg-[#00bdfe] px-[30px] py-[10px] text-white font-medium">Discover All
+          class="border rounded-xl border-[#00bdfe] bg-[#00bdfe] px-[30px] py-[10px] text-white font-medium">Discover
+          All
           Categories</button>
       </div>
     </div>
     <div class="flex justify-center">
       <div v-for="i in cyegor" class="border rounded-[15px] w-full mx-[12px] p-[30px]">
-        <div class="flex">
+        <div class="flex mb-[30px]">
           <div class="bg-[#f7f7f7] rounded-[10px] flex items-center justify-center w-[75px] h-[75px] mr-[20px]">
             <img :src="i.icon" alt="">
           </div>
-          <div>
+          <div class="space-y-3">
             <p class="font-bold text-xl">{{ i.title }} Pic Contest</p>
-            <p><span class="rounded-tl-[10px] rounded-br-[10px] px-[9px] py-[5px] shadow1 font-medium text-[#00bdfe]">{{ i.avaible }}</span><span class="text-[#afafaf]"> Available Contests</span></p>
+            <p><span class="rounded-tl-[10px] rounded-br-[10px] px-[9px] py-[5px] shadow1 font-medium text-[#00bdfe]">{{
+              i.avaible }}</span><span class="text-[#afafaf]"> Available Contests</span></p>
           </div>
         </div>
-        <div>
-          
+        <div class="w-full">
+          <img class="rounded-[15px] w-full" :src="i.picture" alt="">
         </div>
       </div>
     </div>
@@ -82,6 +84,7 @@
 </template>
 
 <script lang="ts" setup>
+import CoolButton from '../components/CoolButton.vue'
 const slides = [
   {
     url: "https://templatemo.com/templates/templatemo_576_snapx_photography/assets/images/featured-01.jpg",
@@ -146,6 +149,7 @@ const cyegor = [
 .shadow1 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
 }
+
 .header {
   background-image: url(/public/banner-bg.jpg);
   background-repeat: no-repeat;

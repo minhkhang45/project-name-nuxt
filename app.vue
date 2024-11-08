@@ -11,16 +11,16 @@
         <NuxtLink to="/cayegor" class="">CATEGORIES</NuxtLink>
         <NuxtLink class="">USERS</NuxtLink>
       </div>
-      <button
-        class="transition duration-300 border-[#00bdfe] border hover:bg-[#00bdfe] hover:text-white rounded-xl px-[30px] py-[10px] my-auto h-fit text-[#00bdfe] flex items-center font-bold">
+      <CoolButton>
         <Icon name="mdi:account" class="text-xl" /> Sign In/Up
-      </button>
-
+      </CoolButton>
     </div>
     <NuxtPage></NuxtPage>
   </div>
 </template>
-
+<script>
+import CoolButton from '../components/CoolButton.vue'
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
